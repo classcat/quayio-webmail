@@ -1,4 +1,4 @@
-FROM ubuntu:vivid
+FROM ubuntu:trusty
 MAINTAINER ClassCat Co.,Ltd. <support@classcat.com>
 
 ########################################################################
@@ -7,6 +7,7 @@ MAINTAINER ClassCat Co.,Ltd. <support@classcat.com>
 ########################################################################
 
 #--- HISTORY -----------------------------------------------------------
+# 19-may-15 : trusty.
 # 17-may-15 : sed -i.bak
 # 16-may-15 : php5-gd php5-json php5-curl php5-imagick libapache2-mod-php5.
 # 08-may-15 : Created.
