@@ -6,6 +6,7 @@
 ########################################################################
 
 #--- HISTORY -----------------------------------------------------------
+# 23-may-15 : changed the delimiter of sed.
 # 19-may-15 : fixed.
 # 14-may-15 : support_url
 # 12-may-15 : smtp server. smtp_user, smtp_pass, default_host, language.
@@ -106,7 +107,8 @@ function set_config_inc_php () {
 
   # $config['support_url'] = '';
   if [ ! -z $SUPPORT_URL ]; then
-    sed -i -e "s/^\$config\['support_url'\].*/\$config['support_url'] = '${SUPPORT_URL}';/" $config_file
+    sed -i -e "s#^\$config\['support_url'\].*#\$config['support_url'] = '${SUPPORT_URL}';#" $config_file
+    #sed -i -e "s/^\$config\['support_url'\].*/\$config['support_url'] = '${SUPPORT_URL}';/" $config_file
   fi
 }
 
